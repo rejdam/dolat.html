@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolata Investment's Kalkulator Spalania Paliwa</title>
+    <style>
+        body{
+            background-image: url("https://wallpaperaccess.com/full/184117.jpg");
+            background-size:cover;
+        }
+        main {
+            border: solid black 2px;
+            border-radius: 50%;
+            background-color:rgba(175, 88, 78, 0.45)
+            
+        }
+        #all-items-div {
+            padding: 10%;
+
+        }
+        h1, h3 {
+            text-align: center;
+        }
+        #inputy {
+            display: block;
+            margin: auto;
+            text-align: center;
+        }
+        input{
+            margin: 0.2rem;
+        }
+        #wynik{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+    <div id="all-items-div">
+    <h1 id="main-text">Kalkulator spalania paliwa</h1>
+    <h3>Dolata Investments &#174;</h3>
+    <div id="inputy">
+    <label>
+    <input type="text" placeholder="Długość trasy w km" id="dlugosc">
+    </label>
+    <br>
+    <label>
+    <input type="text" placeholder="Śr. spalanie (L/100km)" id="spalanie">
+    </label>
+    <br>
+    <label>
+    <input type="text" placeholder="Cena litra paliwa" id="cena-paliwa">
+    </label><br>
+    <label>
+        <input type="text" placeholder="Wynik" id="wynik"disabled>
+        </label><br>
+    <button id="calculate">Przelicz
+
+    </button>
+    
+    </div>
+    </main>
+    <script>
+
+document.getElementById("calculate")
+                .addEventListener("click", calculate);
+
+        function calculate() {
+            var a = document.getElementById("dlugosc").value
+            var b = document.getElementById("spalanie").value
+            var c = document.getElementById("cena-paliwa").value
+            var result = (b * a)/100 * c
+            document.getElementById("wynik").value = result + "zł"
+        }
+
+    </script>
+</body>
+</html>
